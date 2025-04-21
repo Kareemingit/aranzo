@@ -9,10 +9,12 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+
 }
 
 body{
     font-family: "Poppins", sans-serif;
+    
 }
 
 .container{
@@ -181,3 +183,4 @@ header .search form i{
 }
 
 /*end header*/
+
