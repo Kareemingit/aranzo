@@ -223,7 +223,7 @@ div.content{
   }
   header{
     justify-content: space-around;
-    justify-items: ;
+    justify-items: center;
   }
   .form{
     display: flex;}
