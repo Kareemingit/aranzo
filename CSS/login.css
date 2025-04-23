@@ -12,10 +12,6 @@
 
 body{
     font-family: "Poppins", sans-serif;
-    
-    
-
-    
 }
 
 .container{
@@ -185,6 +181,7 @@ header .search form i{
 
 /*end header*/
 
+
 div.content{
     display: flex;
     justify-content: left;
@@ -194,12 +191,22 @@ div.content{
     background-color: rgb(206, 232, 232);
     width: 100%;
     height: 300px;
-  
-  
-  }
-  header,div.content{
+}
+
+.banner-img{
+    width: 229px;
+    height: 229px;
+}
+
+header,div.content{
     background-color: rgb(211, 250, 250);
-  }
+}
+
+.box .box-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
   
   div.box{
     background-color: #eb2626e5;
@@ -247,9 +254,7 @@ div.content{
     background-color:antiquewhite; /* أحمر أغمق عند التمرير أو الضغط */
   }
   
-  
-  
-  .box {
+.box {
     transform: translate(50px, 100px); /* يتحرك 50 بيكسل يمين، 100 لتحت */
   }
   h3,form{
@@ -259,16 +264,15 @@ div.content{
   
   }
   form{
-  position: relative;
-  top: 240px;   /* ينزل لتحت 20 بيكسل */
-  left:-40px;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  /* ينزل لتحت 20 بيكسل */
     /* يتحرك لليمين 30 بيكسل */
   
   }
   .check{
     display: flex;
-    gab: 2px;
+    gap: 2px;
   }
   
   .btn-3 {
@@ -288,20 +292,42 @@ div.content{
     background-color: #b30080;     /* لون أغمق عند المرور */
     transform: translateY(-2px);   /* يتحرك لفوق شوية */
   }
-  .lost-pass{
+
+
+.lost-pass{
     color: rgb(25, 25, 15);
     position: relative;
-   top: 10px;   /* ينزل لتحت 20 بيكسل */
-   left: 200px;
+    /* ينزل لتحت 20 بيكسل */
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
-.container{
+.footer-container{
     display: flex;
     flex-wrap: wrap;
-     margin: auto;
+    margin: auto;
     gap:50px;
 
+}
+
+
+.login-pannel{
+    display: flex;
+}
+
+.pannel-flexer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer{
+    margin-top: 200px;
 }
 
 nav{
@@ -342,4 +368,8 @@ ul{
 
 }
 
-
+@media(max-width:991px){
+    .form{
+        flex-direction: column;
+    }
+}
