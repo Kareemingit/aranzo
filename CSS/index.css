@@ -334,6 +334,74 @@ header .search form i{
         flex: 0 0 50%;
         max-width: 50%;
     }
+    .FeaturedCategory .content .inner-block .parent-box .content-box img{
+        width: 123px;
+    }
 }
 
 /* end Featured Category*/
+/* start shop summary */
+
+.shop-summary{
+    padding: 100px 0;
+}
+
+.shop-summary .section-title{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 25px;
+    
+}
+
+.shop-summary .section-title h2{
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.shop-summary .section-title p{
+    font-size: 19px;
+    font-weight: 800;
+    color: gray;
+}
+
+.shop-summary .shop-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shop-content .item-box {
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.shop-content .item-box a{
+    text-decoration: none;
+}
+
+.shop-content .item-box .useract{
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop-content .item-box .add-to-cart{
+    color: var(--secondary-theme-color);
+}
+
+.shop-content .item-box .favo{
+    color: black;
+}
+
+.shop-content .item-box:hover {
+    box-shadow: 0px 0px 20px #e9e5e5;
+}
+
+.shop-content .item-box img{
+    max-width: 250px;
+}
+
+/* end shop summary */
