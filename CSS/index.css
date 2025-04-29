@@ -43,6 +43,10 @@ header .nav-bar{
     align-items: center;
 }
 
+header .nav-bar img{
+    width: 140px;
+}
+
 header .nav-bar .links .parent-ul{
     list-style: none;
     display: flex;
