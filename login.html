@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doc</title>
+    <title>login</title>
     <!-- main css file -->
     <!--  <link rel="stylesheet" href="">  -->
     <link rel="stylesheet" href="CSS/normaliz.css">
@@ -22,7 +22,7 @@
                    <button class="phone-nav">
                        <i class="fa-solid fa-bars"></i>
                    </button>
-                   <a href="#"><img src="imgs/logo.png"></a>
+                   <a href="#"><img src="imgs/logo2.png"></a>
                    <div class="links">
                        <ul class="parent-ul">
                            <li class="parent-li"><a href="index.html">Home</a></li>
@@ -84,43 +84,54 @@
     <!-- end header -->
     <div class="content">
         <div class="text">
-            <h1>Tracking Order</h1>
-            <p>Home - Tracking Order</p>
+            <h1>Welcome to Our Online Store !</h1>
+         <p>Explore a wide range of premium products we offer. <br>
+             Whether you're looking for electronics, fashion,<br>
+              or home essentials, we've got everything you need</p>
         </div>
-        <img class="banner-img" src="imgs/feature_1.png" alt="">
+        <img class="banner-img" src="imgs/feature_3.png" alt="">
     </div>
     <!-- start login pannel -->
-    <div class="login-pannel">
-        <div class="container">
-            <div class="pannel-flexer">
-                <div class="form">
-                    <div class="box">
-                        <div class="box-content">
-                            <h2>New to our Shop?</h2>
-                            <p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-                            <a class="btn_3" href="#">creat an Account</a>
-                        </div>
-                    </div>
-                
+    
+     
+     
+     <div class="login-container">
+    <div class="login">
+        <button>Sign in to your account</button>
+      
+        <input type="email" id="email" placeholder="Email">
+        <small id="emailError" style="color: red;"></small>
 
-                    <div class="login-form">
-                        <h3>Welcom Back! Please Sign in now</h3>
-                        <form>
-                            <input type="text" placeholder="User name" >
-                            <input type="password" placeholder="password">
-                            <div class="check">
-                            <input type="checkbox">
-                            <p>Remember me</p>
-                            </div>
-                            <button class="btn-3" type="submit" value="submit">log in</button>
-                            <a class="lost-pass" href="#">forget password?</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end login pannel -->
+        <input type="password" id="password" placeholder="Password">
+        <small id="passwordError" style="color: red;"></small>
+
+        <button id="loginBtn" disabled>Login</button>
+      </div>
+         <div class="links">
+           <a href="#">forget password</a>
+           <div class="checkbox-container">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember me</label>
+          </div>
+           <div class="Register">
+           <p>Don't have an account?</p>
+           <a href="signup.html">Register</a></div>
+
+         </div>
+         
+         <div class="social-login">
+            <p>or login with</p>
+           <a href="https://Google.com"> <button>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+              
+            </button></a>
+            <a href="https://facebook.com"><button>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+              Facebook
+            </button></a>
+          </div>
+     </div>
+
     <footer>
     <div class="container">
         <div class="footer-container">
@@ -179,6 +190,35 @@
         </div>
         </div>
     </footer>
+
+    <div class="footer2">
+        <footer class="footer">
+            <div class="subscribe">
+              <input type="email" placeholder="Email Address">
+             <a href="index.html"><button>Subscribe</button></a>
+            </div>
+          
+            <p class="copyright">
+              Copyright ©2025 All rights reserved | This template is made with 
+              <span class="heart">♡</span> by 
+              <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </p>
+          
+            <div class="social-icons">
+              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://yourwebsite.com" target="_blank"><i class="fas fa-globe"></i></a>
+              <a href="https://behance.net" target="_blank"><i class="fab fa-behance"></i></a>
+            </div>
+          </footer>
+</div>
+
+
+
+
+
+
+
     <script src="Javascript/login.js"></script>
     <script src="Javascript/index.js"></script>
 </body>
