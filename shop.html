@@ -3,17 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doc</title>
+    <title>Shop Page</title>
     <!-- main css file -->
-    <!--  <link rel="stylesheet" href="">  -->
-    <link rel="stylesheet" href="CSS/normaliz.css">
-    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="shop.css">
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <header>
+        <div class="container">
+            <div class="nav-bar">
+                <button class="phone-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a href="index.html"><img src="imgs\imgs\logo.png" alt="logo-img"></a>
+                <div class="links">
+                    <ul class="parent-ul">
+                        <li class="parent-li"><a href="index.html">Home</a></li>
+                        <li class="drop-down parent-li">
+                            <a href="#" class="main">Shop</a>
+                            <div class="drop-down-menu">
+                                <ul>
+                                    <li><a href="shop.html">Shop Category</a></li>
+                                    <li><a href="">Product Details</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="drop-down parent-li">
+                            <a href="#" class="main">Pages</a>
+                            <div class="drop-down-menu">
+                                <ul>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="#">Tracking</a></li>
+                                    <li><a href="#">product checkout</a></li>
+                                    <li><a href="cart.html">shopping cart</a></li>
+                                    <li><a href="#">confirmation</a></li>
+                                    <li><a href="#">elements</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="drop-down parent-li">
+                            <a href="#" class="main">Blog</a>
+                            <div class="drop-down-menu">
+                                <ul>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="blog.html">Single Blog</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="parent-li"><a href="contactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="icons">
+                    <a id="search" href="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a class="cart" href="cart.html">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>3</span>
+                    </a>
+                </div>
+            </div>
+            <div class="search" id="Search-Field">
+                <form action="">
+                    <input type="text" placeholder="Search Here">
+                    <i id="rem-input-field" class="fa-solid fa-xmark"></i>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="starting-img">
+        <div class="page-title">
+            <h1 id="main-word"> Shop Page </h1>
+            <br>
+            <p id="second-word">Home - Products Page</p>    
+        </div>
+        <div class="img-container">
+            <img src="imgs\imgs\IMG-sofa.png" id="sofaimg">
+        </div>
+    </div>
+
+    <div class="sidebar-container">
+        <button class="toggle-sidebar-btn">☰ Filters</button>
+        <div class="sidebar">
+            <div class="section-one">
+                <h3>Browse Category</h3>
+                <ul>
+                    <li class="wooden sidebar-hvr">Wooden Tables</li>
+                    <li class="sofa sidebar-hvr">Sofas</li>
+                    <li class="plastic sidebar-hvr">Plastic Tables</li>
+                    <li class="chairs sidebar-hvr">Chairs</li>
+                    <li class="armchair sidebar-hvr">Armchairs</li>
+                    <li class="tv-units sidebar-hvr">TV Units</li>
+                    <li class="beds sidebar-hvr">Beds</li>
+                </ul>
+            </div>
+            <div class="section-two">
+                <h3>Product Filter</h3>
+                <ul>
+                    <li class="one sidebar-hvr">Recliner Armchairs</li>
+                    <li class="two sidebar-hvr">Accent Armchairs</li>
+                    <li class="three sidebar-hvr">Rocking Armchairs</li>
+                    <li class="four sidebar-hvr">Lounge Armchairs</li>
+                    <li class="five sidebar-hvr">Wingback Armchairs</li>
+                    <li class="six sidebar-hvr">Swivel Armchairs</li>
+                </ul>
+            </div>
+    
+            <div class="section-three">
+                <h3>Color Filter</h3>
+                <ul>
+                    <li class="first-color sidebar-hvr">Beige</li>
+                    <li class="second-color sidebar-hvr">Olive</li>
+                    <li class="third-color sidebar-hvr">White</li>
+                    <li class="fourth-color sidebar-hvr">Light Grey</li>
+                    <li class="fifth-color sidebar-hvr">Dark Grey </li>
+                </ul>
+    
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="all">
+
+        <div class="first-row">
+            <div class = "first clr">
+                <img id="first" src="imgs\imgs\IMG-the_elara_chair.jpg" alt="elara-chair" class="product-img">
+                <h2> The Elara Chair </h2>
+                <h3> 17,995 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>                  
+            </div>
+            <div class="second clr">
+                <img id="second" src="imgs\imgs\IMG-the_nova_chair.jpg" alt="nova-chair" class="product-img">
+                <h2> The Nova Chair </h2>
+                <h3> 15,499 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a> 
+            </div>
+            <div class="third clr">
+                <img id="third" src="imgs\imgs\IMG-the_orion_chair.jpg" alt="orion-chair" class="product-img">
+                <h2> The Orion Chair </h2>
+                <h3> 19,995 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="second-row">
+            <div class="fourth clr">
+                <img id="fourth" src="imgs\imgs\IMG-the_luna_chair.jpg" alt="luna-chair" class="product-img">
+                <h2> The Luna Chair </h2>
+                <h3> 22,495 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+            <div class="fifth clr">
+                <img id="fifth" src="imgs\imgs\IMG-the_arlo_chair.jpg" alt="arlo-chair" class="product-img">
+                <h2> The Arlo Chair </h2>
+                <h3> 18,995 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+            <div class="sixth clr">
+                <img id="sixth" src="imgs\imgs\IMG-the_haven_armchair.jpg" alt="haven-armchair" class="product-img">
+                <h2> The Haven Armchair </h2>
+                <h3> 21,495 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="third-row">
+            <div class="seventh clr">
+                <img id="seventh" src="imgs\imgs\IMG-the_celine_wing_chair.jpg" alt="celine-wing-chair" class="product-img">
+                <h2> The Celine Wing Chair </h2>
+                <h3> 19,995 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+            <div class="eighth clr">
+                <img id="eighth" src="imgs\imgs\IMG-the_lennox_chair.jpg" alt="lennox-chair" class="product-img">
+                <h2> The Lennox Chair </h2>
+                <h3> 17,500 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+            <div class="ninth clr">
+                <img id="ninth" src="imgs\imgs\IMG-the_elowen_chair.png" alt="elowen-chair" class="product-img">
+                <h2> The Elowen Chair </h2>
+                <h3> 20,199 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="fourth-row">
+            <div class="tenth clr">
+                <img id="tenth" src="imgs\imgs\IMG-the_vera_chair.jpeg" alt="vera-chair" class="product-img">
+                <h2> The Vera Chair </h2>
+                <h3> 19,500 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+            <div class="eleventh clr">
+                <img id="eleventh" src="imgs\imgs\IMG-the_emery_accent_chair.jpg" alt="emery-accent-chair" class="product-img">
+                <h2> The Emery Accent Chair </h2>
+                <h3> 23,495 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+            <div class="twelfth clr">
+                <img id="twelveth" src="imgs\imgs\IMG-the_swivel_armchair.jpg" alt="swivel-armchair" class="product-img">
+                <h2> The Swivel Armchair </h2>
+                <h3> 25,995 EGP </h3>
+                <a href="cart.html" class="add_cart">
+                    <span class="cart-text">+ add to cart</span>
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>  
+        </div>
+
+    </div>
+
+    <section class="bestsellers-section">
+        <div class="best-seller-container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">Best Sellers</h2>
+                <span class="shop-title">Shop</span>
+                <div class="controls">
+                  <button class="btn-slider" onclick="prevSlide()">&#10094; Prev</button>
+                  <button class="btn-slider" onclick="nextSlide()">Next &#10095;</button>
+                </div>
+            </div>
+      
+          <div class="slider-wrapper">
+            <div class="product-row" id="productRow">
+              <div class="product-col">
+                <div class="product-card">
+                  <img src="imgs\imgs\best sellers\IMG-the_kooper_chair.png" alt="kooper-chair">
+                  <div class="product-name">The Kooper Chair</div>
+                  <div class="product-cost">24,495 EGP</div>
+                </div>
+              </div>
+              <div class="product-col">
+                <div class="product-card">
+                  <img src="imgs\imgs\best sellers\IMG-artiss_lounge_chair.jpg" alt="artiss-chair">
+                  <div class="product-name">Artiss Lounge Chair</div>
+                  <div class="product-cost">26,000 EGP</div>
+                </div>
+              </div>
+              <div class="product-col">
+                <div class="product-card">
+                  <img src="imgs\imgs\best sellers\IMG-the_volta_chair.jpg" alt="volta-chair">
+                  <div class="product-name">The Volta Chair</div>
+                  <div class="product-cost">22,195 EGP</div>
+                </div>
+              </div>
+              <div class="product-col">
+                <div class="product-card">
+                  <img src="imgs\imgs\best sellers\IMG-the_amalfi_armchair.png" alt="amalfi-armchair">
+                  <div class="product-name">The Amalfi Armchair</div>
+                  <div class="product-cost">23,995 EGP</div>
+                </div>
+              </div>
+              <div class="product-col">
+                <div class="product-card">
+                  <img src="iimgs\imgs\best sellers\IMG-the_aria_armchair.jpeg" alt="aria-armchair">
+                  <div class="product-name">The Aria Armchair</div>
+                  <div class="product-cost">24,495 EGP</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section> 
+
+    <script src="shop.js"></script>
+     
 </body>
 </html>
