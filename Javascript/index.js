@@ -41,27 +41,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //dark mode
 
-document.addEventListener("DOMContentLoaded" , function(){{
+document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById("darkModeToggle");
     const body = document.body;
+    const logo = document.getElementById("logo");
 
-    if (localStorage.getItem("theme") === "dark"){
+    // Set initial logo based on saved theme
+    if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
         toggle.textContent = "☀️";
+        logo.src = "imgs/logo2_dark_mode.png";
+    } else {
+        logo.src = "imgs/logo2.png";
     }
 
-    toggle.addEventListener("click" , function (params) {
+    // Toggle theme and logo on click
+    toggle.addEventListener("click", function () {
         body.classList.toggle("dark-mode");
 
-        if(body.classList.contains("dark-mode")){
+        if (body.classList.contains("dark-mode")) {
             localStorage.setItem("theme", "dark");
             toggle.textContent = "☀️";
+            logo.src = "imgs/logo2_dark_mode.png";
         } else {
             localStorage.setItem("theme", "light");
             toggle.textContent = "🌙";
+            logo.src = "imgs/logo2.png";
         }
-    }); 
-}});
+    });
+});
 
 // end header
 //start shop summary
@@ -78,4 +86,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-//end shop summary 
+//end shop summary
