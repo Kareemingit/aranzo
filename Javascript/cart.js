@@ -1,39 +1,88 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let searchIcon = document.getElementById("search");
-    let searchField = document.getElementById("Search-Field");
-
-    let myXicon = document.getElementById("rem-input-field");
+    const searchIcon = document.getElementById("search");
+    const searchField = document.getElementById("Search-Field");
+    const myXicon = document.getElementById("rem-input-field");
 
     searchIcon.onclick = function (event) {
         event.preventDefault();
         searchField.style.display = "block";
     };
-
     myXicon.onclick = function(event){
         event.preventDefault();
         searchField.style.display = "none";
-    }
-});
+    };
 
-document.addEventListener("DOMContentLoaded", function () {
     const navToggleBtn = document.querySelector(".phone-nav");
     const navMenu = document.querySelector(".parent-ul");
 
     navToggleBtn.addEventListener("click", function () {
         if (window.innerWidth <= 991) {
-            if (navMenu.style.display === "block") {
-                navMenu.style.display = "none";
-            } else {
-                navMenu.style.display = "block";
-            }
+            navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
         }
     });
 
     window.addEventListener("resize", function () {
-        if (window.innerWidth > 991) {
-            navMenu.style.display = "flex";
+        navMenu.style.display = window.innerWidth > 991 ? "flex" : "none";
+    });
+
+    const toggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    if (localStorage.getItem("theme") === "dark"){
+        body.classList.add("dark-mode");
+        toggle.textContent = "☀️";
+    }
+
+    toggle.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            toggle.textContent = "☀️";
         } else {
-            navMenu.style.display = "none";
+            localStorage.setItem("theme", "light");
+            toggle.textContent = "🌙";
+        }
+    });
+});
+
+function updateTotal(input) {
+    const row = input.closest("tr");
+    const priceText = row.children[1].textContent.trim().replace(" EGP", "").replace(",", "");
+    const quantity = parseInt(input.value);
+    const total = priceText * quantity;
+
+    row.querySelector(".total-cell").textContent = new Intl.NumberFormat().format(total) + " EGP";
+
+    updateGrandTotal();
+}
+
+function updateGrandTotal() {
+    let total = 0;
+    document.querySelectorAll(".total-cell").forEach(cell => {
+        const amount = parseFloat(cell.textContent.replace(" EGP", "").replace(/,/g, ""));
+        total += amount;
+    });
+    document.getElementById("grand-total").textContent = "Grand Total: " + new Intl.NumberFormat().format(total) + " EGP";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const submitBtn = document.getElementById("submitOrderBtn");
+    const message = document.getElementById("order-message");
+
+    submitBtn.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the default link behavior
+
+        const grandTotalText = document.getElementById("grand-total").textContent;
+        const totalValue = parseFloat(grandTotalText.replace("Grand Total: ", "").replace(" EGP", "").replace(/,/g, ""));
+
+        if (isNaN(totalValue) || totalValue === 0) {
+            message.textContent = "Your cart is empty. Please add items before submitting.";
+            message.style.color = "red";
+        } else {
+            message.textContent = "Order Submitted! Thank you for ordering from our website!";
+            message.style.color = "green";
+
+            setTimeout(() => window.location.href = 'index.html', 2500);
         }
     });
 });

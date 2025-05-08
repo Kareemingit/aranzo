@@ -1,71 +1,83 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let searchIcon = document.getElementById("search");
-    let searchField = document.getElementById("Search-Field");
+    const searchIcon = document.getElementById("search");
+    const searchField = document.getElementById("Search-Field");
+    const myXicon = document.getElementById("rem-input-field");
 
-    let myXicon = document.getElementById("rem-input-field");
+    if (searchIcon && searchField && myXicon) {
+        searchIcon.onclick = function (event) {
+            event.preventDefault();
+            searchField.style.display = "block";
+        };
 
-    searchIcon.onclick = function (event) {
-        event.preventDefault();
-        searchField.style.display = "block";
-    };
-
-    myXicon.onclick = function(event){
-        event.preventDefault();
-        searchField.style.display = "none";
+        myXicon.onclick = function (event) {
+            event.preventDefault();
+            searchField.style.display = "none";
+        };
     }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     const navToggleBtn = document.querySelector(".phone-nav");
     const navMenu = document.querySelector(".parent-ul");
 
-    navToggleBtn.addEventListener("click", function () {
-        if (window.innerWidth <= 991) {
-            if (navMenu.style.display === "block") {
-                navMenu.style.display = "none";
-            } else {
-                navMenu.style.display = "block";
+    if (navToggleBtn && navMenu) {
+        navToggleBtn.addEventListener("click", function () {
+            if (window.innerWidth <= 991) {
+                navMenu.style.display = (navMenu.style.display === "block") ? "none" : "block";
             }
-        }
-    });
+        });
 
-    window.addEventListener("resize", function () {
-        if (window.innerWidth > 991) {
-            navMenu.style.display = "flex";
-        } else {
-            navMenu.style.display = "none";
-        }
-    });
-});
+        window.addEventListener("resize", function () {
+            navMenu.style.display = (window.innerWidth > 991) ? "flex" : "none";
+        });
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    if (toggle) {
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-mode");
+            toggle.textContent = "☀️";
+        }
+
+        toggle.addEventListener("click", function () {
+            body.classList.toggle("dark-mode");
+            if (body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+                toggle.textContent = "☀️";
+            } else {
+                localStorage.setItem("theme", "light");
+                toggle.textContent = "🌙";
+            }
+        });
+    }
+
     const toggleBtn = document.querySelector(".toggle-sidebar-btn");
     const sidebar = document.querySelector(".sidebar");
 
     if (toggleBtn && sidebar) {
-      toggleBtn.addEventListener("click", function () {
-        sidebar.classList.toggle("active");
-        sidebar.addEventListener("click", function(event) {
-          if (event.target === sidebar) {
-            sidebar.classList.remove("active");
-          }
+        toggleBtn.addEventListener("click", function () {
+            sidebar.classList.toggle("active");
         });
-      });
+
+        sidebar.addEventListener("click", function (event) {
+            if (event.target === sidebar) {
+                sidebar.classList.remove("active");
+            }
+        });
+    }
+
+    const row = document.getElementById("productRow");
+    if (row) {
+        window.nextSlide = function () {
+            const firstItem = row.children[0];
+            row.appendChild(firstItem.cloneNode(true));
+            row.removeChild(firstItem);
+        };
+
+        window.prevSlide = function () {
+            const lastItem = row.children[row.children.length - 1];
+            row.insertBefore(lastItem.cloneNode(true), row.children[0]);
+            row.removeChild(row.children[row.children.length - 1]);
+        };
     }
 });
-
-const row = document.getElementById("productRow");
-  const items = row.children;
-  let startIndex = 0;
-
-function nextSlide() {
-    const firstItem = row.children[0];
-    row.appendChild(firstItem.cloneNode(true));
-    row.removeChild(firstItem);
-}
-
-function prevSlide() {
-    const lastItem = row.children[row.children.length - 1];
-    row.insertBefore(lastItem.cloneNode(true), row.children[0]); 
-    row.removeChild(row.children[row.children.length - 1]); 
-}

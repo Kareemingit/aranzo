@@ -3,11 +3,150 @@
     --secondary-theme-color: #f5f0ec;
 }
 
+body {
+    font-family: "Poppins", sans-serif;
+}
+
 .container{
     width: 85%;
     margin: 0 auto;
     padding: 0 15px;
 }
+
+/*start dark mode*/
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+body.dark-mode {
+    --primary-theme-color: #1e1e1e;
+    --secondary-theme-color: #ff3368;
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode a {
+    color: #ddd;
+}
+
+body.dark-mode header {
+    background-color: var(--primary-theme-color);
+}
+
+body.dark-mode header .nav-bar .links .parent-ul .parent-li a {
+    color: #f1f1f1;
+}
+
+body.dark-mode header .nav-bar .links .parent-ul .drop-down .main::after {
+    border-color: #f1f1f1 transparent transparent transparent;
+}
+
+body.dark-mode header .nav-bar .icons a {
+    color: #f1f1f1;
+}
+
+body.dark-mode header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul li a {
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    body.dark-mode header .nav-bar .links .parent-ul {
+        background-color: #2a2a2a;
+    }
+}
+
+body.dark-mode header .search form {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode header .search input {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+body.dark-mode header .search input::placeholder {
+    color: #ccc;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: white;
+}
+
+body.dark-mode .sidebar-hvr:hover {
+    color: var(--secondary-theme-color);
+}
+
+@media only screen and (max-width: 1400px) {
+    body.dark-mode .sidebar {
+        background-color: rgba(34, 34, 34, 0.95); /* dark gray background */
+        color: white;
+    }
+}
+
+body.dark-mode .sidebar {
+    color: white;
+}
+
+body.dark-mode .sidebar h3 {
+    color: white;
+}
+
+body.dark-mode .section-one,
+body.dark-mode .section-two,
+body.dark-mode .section-three {
+    color: white;
+}
+
+body.dark-mode .sidebar-hvr:hover {
+    color: var(--secondary-theme-color); 
+}
+
+body.dark-mode .toggle-sidebar-btn {
+    background-color: #222; 
+    color: white;           
+    border: 1px solid #555;  
+}
+
+body.dark-mode .clr {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+body.dark-mode .clr h2,
+body.dark-mode .clr h3 {
+    color: #fff;
+}
+
+body.dark-mode .product-card {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+body.dark-mode .product-cost {
+    color: #4caf50;
+}
+
+body.dark-mode .bestsellers-section {
+    background-color: #1a1a1a;
+}
+/* end dark mode */
 
 /* start nav bar */
 header{
