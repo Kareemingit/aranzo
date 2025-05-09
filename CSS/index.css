@@ -6,8 +6,9 @@
 }
 
 body.dark-mode{
-    --primary-theme-color: #1e1e1e;
     --secondary-theme-color: #333;
+    --primary-theme-color:#1e1e1e;
+
 }
 
 * {
