@@ -1,4 +1,3 @@
-// start header
 document.addEventListener("DOMContentLoaded", function () {
     let searchIcon = document.getElementById("search");
     let searchField = document.getElementById("Search-Field");
@@ -39,47 +38,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.querySelector('.search-button').addEventListener('click', function(event) {
-    const searchInput = document.querySelector('input[type="text"]');
-    const keyword = searchInput.value.trim();
 
-    if (keyword === "") {
-      event.preventDefault(); 
-      alert("please , enter word to search");
-    } else {
-      
-    }
-  });
+let count = 1;
+const quantity = document.getElementById('quantity');
 
+function increase() {
+  count++;
+  quantity.textContent = count;
+}
 
-
-document.querySelector('.subscribe button').addEventListener('click', function(event) {
-    const emailInput = document.querySelector('.subscribe input');
-    const email = emailInput.value.trim();
-
-    
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (email === "") {
-      event.preventDefault();
-      alert("please enter a correct email addres.");
-    } else if (!emailPattern.test(email)) {
-      event.preventDefault();
-      alert("please enter a correct email address");
-    } else {
-      alert("you have successfully subscribed.");
-     
-    }
-  });
-  
-  
-//dark mode
+function decrease() {
+  if (count > 1) {
+    count--;
+    quantity.textContent = count;
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById("darkModeToggle");
     const body = document.body;
     const logo = document.getElementById("logo");
-    
+
+    // Set initial logo based on saved theme
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
         toggle.textContent = "☀️";
@@ -88,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         logo.src = "imgs/logo2.png";
     }
 
+    // Toggle theme and logo on click
     toggle.addEventListener("click", function () {
         body.classList.toggle("dark-mode");
 
@@ -102,3 +83,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+const subscribeBtn = document.querySelector('.subscribe button');
+const subscribeInput = document.querySelector('.subscribe input');
+
+subscribeBtn.addEventListener('click', function (event) {
+  const email = subscribeInput.value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (email === "") {
+    event.preventDefault();
+    alert("Please enter your email address.");
+  } else if (!emailPattern.test(email)) {
+    event.preventDefault();
+    alert("Please enter a valid email address.");
+  } else {
+    alert("You have successfully subscribed.");
+  }
+});
+
+
+
+

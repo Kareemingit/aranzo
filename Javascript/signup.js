@@ -52,7 +52,6 @@ const confirmPasswordError = document.getElementById("confirmPasswordError");
 function validateForm() {
   let valid = true;
 
-  // تحقق من اسم المستخدم
   if (usernameInput.value.trim() === "") {
     usernameError.textContent = "Username is required";
     valid = false;
@@ -60,7 +59,6 @@ function validateForm() {
     usernameError.textContent = "";
   }
 
-  // تحقق من الإيميل
   const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (!emailRegex.test(emailInput.value.trim())) {
     emailError.textContent = "Invalid email format";
@@ -69,7 +67,6 @@ function validateForm() {
     emailError.textContent = "";
   }
 
-  // تحقق من كلمة السر
   const password = passwordInput.value.trim();
   if (password === "") {
     passwordError.textContent = "Password is required";
@@ -78,7 +75,6 @@ function validateForm() {
     passwordError.textContent = "";
   }
 
-  // تحقق من تطابق كلمة السر
   if (password !== confirmPasswordInput.value.trim()) {
     confirmPasswordError.textContent = "Passwords do not match";
     valid = false;
@@ -86,22 +82,22 @@ function validateForm() {
     confirmPasswordError.textContent = "";
   }
 
-  // تفعيل أو تعطيل زر إنشاء الحساب بناءً على التحقق
+ 
   createBtn.disabled = !valid;
 }
 
-// رصد التغييرات في الحقول المختلفة
+
 usernameInput.addEventListener("input", validateForm);
 emailInput.addEventListener("input", validateForm);
 passwordInput.addEventListener("input", validateForm);
 confirmPasswordInput.addEventListener("input", validateForm);
 
-// عند الضغط على الزر، نعرض رسالة نجاح أو نحول المستخدم للصفحة المطلوبة (إذا كانت البيانات صحيحة)
+
 createBtn.addEventListener("click", function(e) {
-  e.preventDefault(); // لمنع إعادة تحميل الصفحة
+  e.preventDefault(); 
   if (!createBtn.disabled) {
-    alert("Account created successfully!"); // رسالة نجاح (ممكن استبدالها بتوجيه للصفحة)
-    window.location.href = "index.html"; // توجيه للمستخدم إلى الصفحة الرئيسية بعد النجاح
+    alert("Account created successfully!"); 
+    window.location.href = "index.html";
   }
 });
 
@@ -114,7 +110,7 @@ document.querySelector('.subscribe button').addEventListener('click', function(e
 const emailInput = document.querySelector('.subscribe input');
 const email = emailInput.value.trim();
 
-// تعبير منتظم لصيغة الإيميل
+
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 if (email === "") {
@@ -125,7 +121,7 @@ if (email === "") {
   alert("please enter a correct email address");
 } else {
   alert("you have successfully subscribed.");
-  // هنا ممكن تضيفي كود إرسال البيانات لو عايزة
+  
 }
 }); 
 document.addEventListener("DOMContentLoaded" , function(){{
