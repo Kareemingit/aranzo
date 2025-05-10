@@ -556,7 +556,7 @@ header .search form i {
 }
 
 /* for small screen */
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 900px) {
     .first-row, 
     .second-row, 
     .third-row, 
@@ -568,7 +568,7 @@ header .search form i {
     }
 
     .clr {
-        width: 35%;
+        width: 30%;
         margin: 10px 0;
     }
 
