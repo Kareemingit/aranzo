@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // search field
     const searchIcon = document.getElementById("search");
     const searchField = document.getElementById("Search-Field");
     const myXicon = document.getElementById("rem-input-field");
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     }
 
-    // navbar for small screens
     const navToggleBtn = document.querySelector(".phone-nav");
     const navMenu = document.querySelector(".parent-ul");
 
@@ -32,34 +30,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // dark mode toggle
     const toggle = document.getElementById("darkModeToggle");
     const body = document.body;
-    const logo = document.getElementById("logo");
 
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        toggle.textContent = "☀️";
-        logo.src = "imgs/logo2_dark_mode.png";
-    } else {
-        logo.src = "imgs/logo2.png";
+    if (toggle) {
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-mode");
+            toggle.textContent = "☀";
+        }
+
+        toggle.addEventListener("click", function () {
+            body.classList.toggle("dark-mode");
+            if (body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+                toggle.textContent = "☀";
+            } else {
+                localStorage.setItem("theme", "light");
+                toggle.textContent = "🌙";
+            }
+        });
     }
 
-    toggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
-
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-            toggle.textContent = "☀️";
-            logo.src = "imgs/logo2_dark_mode.png";
-        } else {
-            localStorage.setItem("theme", "light");
-            toggle.textContent = "🌙";
-            logo.src = "imgs/logo2.png";
-        }
-    });
-
-    // sidebar for small screens
     const toggleBtn = document.querySelector(".toggle-sidebar-btn");
     const sidebar = document.querySelector(".sidebar");
 
@@ -75,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // bestsellers slideshow
     const row = document.getElementById("productRow");
     if (row) {
         window.nextSlide = function () {
