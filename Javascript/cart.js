@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // search field
     const searchIcon = document.getElementById("search");
     const searchField = document.getElementById("Search-Field");
     const myXicon = document.getElementById("rem-input-field");
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         searchField.style.display = "none";
     };
 
+    // navbar for small screens 
     const navToggleBtn = document.querySelector(".phone-nav");
     const navMenu = document.querySelector(".parent-ul");
 
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         navMenu.style.display = window.innerWidth > 991 ? "flex" : "none";
     });
 
+    // dark mode toggle
     const toggle = document.getElementById("darkModeToggle");
     const body = document.body;
     const logo = document.getElementById("logo");
@@ -52,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// update and add the total for every product alone
 function updateTotal(input) {
     const row = input.closest("tr");
     const priceText = row.children[1].textContent.trim().replace(" EGP", "").replace(",", "");
@@ -63,6 +67,7 @@ function updateTotal(input) {
     updateGrandTotal();
 }
 
+// update the grand total
 function updateGrandTotal() {
     let total = 0;
     document.querySelectorAll(".total-cell").forEach(cell => {
@@ -72,6 +77,7 @@ function updateGrandTotal() {
     document.getElementById("grand-total").textContent = "Grand Total: " + new Intl.NumberFormat().format(total) + " EGP";
 }
 
+// the submit message
 document.addEventListener("DOMContentLoaded", function () {
     const submitBtn = document.getElementById("submitOrderBtn");
     const message = document.getElementById("order-message");
