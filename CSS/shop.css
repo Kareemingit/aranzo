@@ -1,3 +1,4 @@
+ 
 :root {
     --primary-theme-color: #ecfdff;
     --secondary-theme-color: #ff3368;
@@ -149,44 +150,44 @@ body.dark-mode .bestsellers-section {
 /* end dark mode */
 
 /* start nav bar */
-header {
+header{
     position: relative;
     background-color: var(--primary-theme-color);
 }
 
-header .phone-nav {
+header .phone-nav{
     display: none;
     border: 0px solid;
     background-color: transparent;
 }
 
-header .nav-bar {
+header .nav-bar{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .nav-bar a img {
+header .nav-bar img{
     width: 140px;
 }
 
-header .nav-bar .links .parent-ul {
+header .nav-bar .links .parent-ul{
     list-style: none;
     display: flex;
 }
 
-header .nav-bar .links .parent-ul .parent-li {
+header .nav-bar .links .parent-ul .parent-li{
     padding:25px;
     cursor: pointer;
 }
 
-header .nav-bar .links .parent-ul .parent-li a {
+header .nav-bar .links .parent-ul .parent-li a{
     text-decoration: none;
     color: black;
     font-size: 15px;
 }
 
-header .nav-bar .links .parent-ul .drop-down .main::after {
+header .nav-bar .links .parent-ul .drop-down .main::after{
     display: inline-block;
     content: "";
     width: 0;
@@ -202,7 +203,11 @@ header .nav-bar .links .parent-ul .drop-down .drop-down-menu {
     transition: all 0.2s ease-in-out;
 }
 
-header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul {
+header a .disabled{
+    display: none;
+}
+
+header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul{
     transform: scaleY(0);
     position: absolute;
     z-index: 1;
@@ -214,26 +219,38 @@ header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul {
     transition: all 0.3s ease-in-out;
 }
 
-header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul li {
-    padding: 8px;
-}
-
-header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul li a {
-    color: white;
-}
-
 header .nav-bar .links .parent-ul .parent-li:hover > .drop-down-menu ul {
     transform: scaleY(1);
 }
 
-header .nav-bar .icons a {
+header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul li{
+    padding: 8px;
+}
+
+header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul li a{
+    color: white;
+}
+
+body.dark-mode header .nav-bar .links .parent-ul li a{
+    color: white;
+}
+
+body.dark-mode header .nav-bar .links .parent-ul .drop-down .main::after {
+    border-color: #f1f1f1 transparent transparent transparent;
+}
+
+header .nav-bar .icons a{
     position: relative;
     text-decoration: none;
     color: black;
     padding: 12px;
 }
 
-header .nav-bar .icons a span {
+body.dark-mode header .nav-bar .icons a{
+    color: white;
+}
+
+header .nav-bar .icons a span{
     width: 14px;
     position: absolute;
     background-color: var(--secondary-theme-color);
@@ -244,64 +261,60 @@ header .nav-bar .icons a span {
     top: 5px;
 }
 
-header .search {
+header .search{
     width: 83%;
     position: absolute;
     display: none;
     z-index: 9;
 }
 
-header .search form {
-    background-color: var(--primary-theme-color);
-    position: relative;
+header .search form{
+    background-color: var(--secondary-theme-color);
 }
-
-header .search input {
+header .search input{
     width: 98%;
     background-color: var(--secondary-theme-color);
     border: 0px solid;
     padding: 10px;
 }
 
-header .search input::placeholder {
+header .search input::placeholder{
     color: white;
 }
 
-header .search input , select , textarea {
+header .search input , select , textarea{
     color: white;
 }
-
-header .search input:focus {
+header .search input:focus{
     outline: none;
 }
 
-header .search form i {
+header .search form i{
     color: white;
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
 }
 
-/* for small screen */
-@media (max-width:991px) {
-    header .phone-nav {
+
+
+/* small screen */
+@media (max-width:991px){
+    header .phone-nav{
         display: inline-block;
         cursor: pointer;
     }
 
-    .container {
+    body.dark-mode header .phone-nav{
+        color: white;
+    }
+    .container{
         padding: 29px 0;
         width: 70%;
     }
-
-    header .nav-bar .links {
+    header .nav-bar .links{
         position: absolute;
         width: 70%;       
     }
-
-    header .nav-bar .links .parent-ul {
+    header .nav-bar .links .parent-ul{
         display: none;
         position: absolute;
         padding: 0;
@@ -311,18 +324,21 @@ header .search form i {
         z-index: 9;
     }
 
-    header .nav-bar .links .parent-ul .parent-li {
+    body.dark-mode header .nav-bar .links .parent-ul{
+        background-color: #121212;
+    }
+    header .nav-bar .links .parent-ul .parent-li{
         padding: 14px;
     }
-
-    header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul {
+    header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul{
         width: 100%;
     }
 
-    header .nav-bar .icons a {
+    header .nav-bar .icons a{
         padding: 5px;
     }
 }
+
 /* end nav bar */
 
 /* start banner */

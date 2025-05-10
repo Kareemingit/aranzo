@@ -51,7 +51,7 @@ const emailInput = document.getElementById("email");
     }
 
     function isStrongPassword(password) {
-      // على الأقل: حرف صغير، حرف كبير، رقم، رمز خاص، 8 حروف
+  
       const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
       return passwordRegex.test(password);
     }
@@ -61,17 +61,16 @@ const emailInput = document.getElementById("email");
       const password = passwordInput.value.trim();
       let valid = true;
 
-      // تحقق من الإيميل
       if (!isValidEmail(email)) {
-        emailError.textContent = "أدخل بريد إلكتروني صحيح (مثال: example@domain.com)";
+        emailError.textContent = "Enter a valid email address (e.g., example@domain.com)";
         valid = false;
       } else {
         emailError.textContent = "";
       }
 
-      // تحقق من كلمة المرور
+      
       if (!isStrongPassword(password)) {
-        passwordError.textContent = "كلمة المرور يجب أن تكون 8 أحرف على الأقل، وتحتوي على حرف كبير وحرف صغير ورقم ورمز خاص.";
+      passwordError.textContent = "Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.";
         valid = false;
       } else {
         passwordError.textContent = "";
@@ -80,25 +79,19 @@ const emailInput = document.getElementById("email");
       loginBtn.disabled = !valid;
     }
 
-    // التحقق أثناء الكتابة
+  
     emailInput.addEventListener("input", validateForm);
     passwordInput.addEventListener("input", validateForm);
 
-    // تنفيذ التحقق عند التحميل
+  
     window.addEventListener("DOMContentLoaded", validateForm);
 
-    // زر الدخول
+
     loginBtn.addEventListener("click", function (e) {
       e.preventDefault();
-      alert("تم تسجيل الدخول بنجاح!");
-      window.location.href = "index.html"; // إعادة التوجيه
-    });
-
-
-
-// ===================
-//  التحقق من الاشتراك
-// ===================
+      alert("Login successful!");
+      window.location.href = "index.html"; 
+    })
 const subscribeBtn = document.querySelector('.subscribe button');
 const subscribeInput = document.querySelector('.subscribe input');
 
@@ -114,7 +107,6 @@ subscribeBtn.addEventListener('click', function (event) {
     alert("Please enter a valid email address.");
   } else {
     alert("You have successfully subscribed.");
-    // يمكنك هنا إرسال البيانات إلى السيرفر مثلاً
   }
 });
 //dark mode
