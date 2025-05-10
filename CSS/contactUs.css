@@ -1,0 +1,328 @@
+:root{
+    --primary-theme-color: #ecfdff;
+    --secondary-theme-color: #ff3368;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+.container{
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*start header*/
+
+header{
+    position: relative;
+    background-color: var(--primary-theme-color);
+}
+
+header .phone-nav{
+    display: none;
+    border: 0px solid;
+    background-color: transparent;
+}
+
+header .nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-bar img{
+    width: 140px;
+}
+
+header .nav-bar .links .parent-ul{
+    list-style: none;
+    display: flex;
+}
+
+header .nav-bar .links .parent-ul .parent-li{
+    padding:25px;
+    cursor: pointer;
+}
+
+header .nav-bar .links .parent-ul .parent-li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+header .nav-bar .links .parent-ul .drop-down .main::after{
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-color: black transparent transparent transparent;
+    margin-left: 6px;
+}
+
+header .nav-bar .links .parent-ul .drop-down .drop-down-menu {
+    position: relative;
+    top: 17px;
+    transition: all 0.2s ease-in-out;
+}
+
+header a .disabled{
+    display: none;
+}
+
+header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul{
+    transform: scaleY(0);
+    position: absolute;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    width: 158px;
+    background-color: var(--secondary-theme-color);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+header .nav-bar .links .parent-ul .parent-li:hover > .drop-down-menu ul {
+    transform: scaleY(1);
+}
+
+header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul li{
+    padding: 8px;
+}
+
+header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul li a{
+    color: white;
+}
+
+body.dark-mode header .nav-bar .links .parent-ul li a{
+    color: white;
+}
+
+body.dark-mode header .nav-bar .links .parent-ul .drop-down .main::after {
+    border-color: #f1f1f1 transparent transparent transparent;
+}
+
+header .nav-bar .icons a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+}
+
+body.dark-mode header .nav-bar .icons a{
+    color: white;
+}
+
+header .nav-bar .icons a span{
+    width: 14px;
+    position: absolute;
+    background-color: var(--secondary-theme-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    top: 5px;
+}
+
+header .search{
+    width: 83%;
+    position: absolute;
+    display: none;
+    z-index: 9;
+}
+
+header .search form{
+    background-color: var(--secondary-theme-color);
+}
+header .search input{
+    width: 98%;
+    background-color: var(--secondary-theme-color);
+    border: 0px solid;
+    padding: 10px;
+}
+
+header .search input::placeholder{
+    color: white;
+}
+
+header .search input , select , textarea{
+    color: white;
+}
+header .search input:focus{
+    outline: none;
+}
+
+header .search form i{
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* small screen */
+@media (max-width:991px){
+    header .phone-nav{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    body.dark-mode header .phone-nav{
+        color: white;
+    }
+    .container{
+        padding: 29px 0;
+        width: 70%;
+    }
+    header .nav-bar .links{
+        position: absolute;
+        width: 70%;       
+    }
+    header .nav-bar .links .parent-ul{
+        display: none;
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        background-color: #eee;
+        border-radius: 5px;
+        z-index: 9;
+    }
+
+    body.dark-mode header .nav-bar .links .parent-ul{
+        background-color: #121212;
+    }
+    header .nav-bar .links .parent-ul .parent-li{
+        padding: 14px;
+    }
+    header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul{
+        width: 100%;
+    }
+
+    header .nav-bar .icons a{
+        padding: 5px;
+    }
+}
+
+/*end header*/
+
+/*contact start*/
+*{padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;}
+    
+.contact{min-height: 100vh;
+    background-color: rgb(239, 239, 239);
+    padding: 50px;
+    text-align: center;}
+    
+.contact .container{margin: auto;
+    max-width: 800px;}
+    
+.contact .container h2{font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;}
+.contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* عمودين متساويين */
+        gap: 40px;
+        align-items: start;
+        margin-top: 20px;
+      }
+      
+.contact-form,
+.contact-info {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+
+.contact-form{text-align: left;}
+
+.contact-form h3 {font-size:24px ;
+        margin-bottom: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+          margin-bottom: 15px;
+        }
+        
+.input,textarea{width: 100%;
+padding: 12px;
+border-radius: 9px;
+border:none
+background-color #f8f9fa;
+color: #333;}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+.button :hover{background-color: #45a049;}
+.contact-info{text-align: left;}
+.contact-info h4{font-size: 24px;
+margin-bottom: 20px;}
+.contact-info p{margin-bottom: 12px;}
+
+.contact-info i{color:  black;}
+@media (max-width: 768px) {
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+/*dark mode*/
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+body.dark-mode{
+    --primary-theme-color: #1e1e1e;
+}
+
+body.dark-mode header .nav-bar .links .parent-ul .drop-down .drop-down-menu ul{
+    background-color: #333;
+}
+
+body.dark-mode header .search form{
+    background-color: #333;
+}
+
+body.dark-mode header .search input{
+    background-color: #333;
+}
+
+body.dark-mode .contact{
+    background-color: black;
+}
+
+body.dark-mode .container h2{
+    color: white;
+}
+
+body.dark-mode .contact-form,body.dark-mode .contact-info{
+    color: #f8f9fa;
+    background-color: #333;
+}
