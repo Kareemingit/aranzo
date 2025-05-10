@@ -119,6 +119,28 @@
   
       </div>
     </section>
+          <div class="review-section">
+            <h3>Write a Review</h3>
+            <form>
+              <div>
+                <input type="text" id="reviewer-name" name="reviewer-name" placeholder="Your name" required>
+              </div>
+              <div>
+                <select id="rating" name="rating" required>
+                  <option value="">Rate us</option>
+                  <option value="5">★★★★★ - Excellent</option>
+                  <option value="4">★★★★☆ - Good</option>
+                  <option value="3">★★★☆☆ - Average</option>
+                  <option value="2">★★☆☆☆ - Poor</option>
+                  <option value="1">★☆☆☆☆ - Terrible</option>
+                </select>
+              </div>
+              <div>
+                <textarea id="review" name="review" placeholder="Write your review..." rows="4" required></textarea>
+              </div>
+              <button class="button">Submit Review</button>
+            </form>
+          </div>
     <script src="Javascript/contactUs.js"></script>
   </body>  
 </html>

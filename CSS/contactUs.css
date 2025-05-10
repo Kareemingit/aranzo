@@ -282,6 +282,35 @@ margin-bottom: 20px;}
     }
   }
 
+
+    .review-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 40px;
+    text-align: left;
+  }
+  
+  .review-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .review-section form div {
+    margin-bottom: 15px;
+  }
+  
+  .review-section input,
+  .review-section select,
+  .review-section textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 9px;
+    color: #333;
+  }
+
 /*dark mode*/
 
 .dark-mode-toggle {
@@ -325,4 +354,8 @@ body.dark-mode .container h2{
 body.dark-mode .contact-form,body.dark-mode .contact-info{
     color: #f8f9fa;
     background-color: #333;
+}
+
+body.dark-mode .review-section{
+    background-color: #000;
 }
