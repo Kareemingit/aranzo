@@ -400,6 +400,7 @@ header .search form i {
 }
 
 .sidebar h3 {
+    font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
 }
 
@@ -676,13 +677,14 @@ header .search form i {
 }
 
 .product-name {
+    font-family: 'Cormorant Garamond', serif;
     font-size: 110%;
     margin-bottom: 2%;
 }
 
 .product-cost {
+    font-family: 'DM Serif Display', serif;
     color: #28a745;
-    font-weight: bold;
 }
 
 .slider-wrapper {
