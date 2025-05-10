@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const message = document.getElementById("order-message");
 
     submitBtn.addEventListener("click", function (e) {
-        e.preventDefault(); // Prevent the default link behavior
+        e.preventDefault();
 
         const grandTotalText = document.getElementById("grand-total").textContent;
         const totalValue = parseFloat(grandTotalText.replace("Grand Total: ", "").replace(" EGP", "").replace(/,/g, ""));
