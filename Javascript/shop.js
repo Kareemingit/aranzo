@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // search field
     const searchIcon = document.getElementById("search");
     const searchField = document.getElementById("Search-Field");
     const myXicon = document.getElementById("rem-input-field");
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     }
 
+    // navbar for small screens
     const navToggleBtn = document.querySelector(".phone-nav");
     const navMenu = document.querySelector(".parent-ul");
 
@@ -30,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // dark mode toggle
     const toggle = document.getElementById("darkModeToggle");
     const body = document.body;
     const logo = document.getElementById("logo");
@@ -56,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // sidebar for small screens
     const toggleBtn = document.querySelector(".toggle-sidebar-btn");
     const sidebar = document.querySelector(".sidebar");
 
@@ -71,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // bestsellers slideshow
     const row = document.getElementById("productRow");
     if (row) {
         window.nextSlide = function () {

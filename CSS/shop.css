@@ -95,7 +95,7 @@ body.dark-mode .sidebar-hvr:hover {
 
 @media only screen and (max-width: 1400px) {
     body.dark-mode .sidebar {
-        background-color: rgba(34, 34, 34, 0.95); /* dark gray background */
+        background-color: rgba(34, 34, 34, 0.95);
         color: white;
     }
 }
@@ -325,7 +325,7 @@ header .search form i {
 }
 /* end nav bar */
 
-/* start main image */
+/* start banner */
 .starting-img {
     background-color: var(--primary-theme-color);
     height: auto;
@@ -387,7 +387,7 @@ header .search form i {
         font-size: 13px;
     }
 }
-/* end main image */
+/* end banner */
 
 /* start SideBar */
 .sidebar {
