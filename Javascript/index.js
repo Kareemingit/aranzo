@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
     const logo = document.getElementById("logo");
 
-    // Set initial logo based on saved theme
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
         toggle.textContent = "☀️";
@@ -55,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         logo.src = "imgs/logo2.png";
     }
 
-    // Toggle theme and logo on click
     toggle.addEventListener("click", function () {
         body.classList.toggle("dark-mode");
 

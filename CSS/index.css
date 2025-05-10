@@ -546,7 +546,7 @@ body.dark-mode .banner .innerArea .contentBoxArea p{
 }
 
 /* end video section*/
-/* start sale part(Ahmed) */
+/* start sale part */
 .sale-section {
     /* height: 300px; */
     display: flex;
@@ -605,7 +605,7 @@ body.dark-mode .banner .innerArea .contentBoxArea p{
   }
 
 /* end sale part */
-/* start best sellers(Ahmed) */
+/* start best sellers */
   
   .best-sellers {
     padding: 90px 0;
@@ -647,7 +647,7 @@ body.dark-mode .banner .innerArea .contentBoxArea p{
     height: 200px;
   }
 /* end best sellers*/
-/* start Subscribe section (Mohammed) */
+/* start Subscribe section */
 .subscribe-section {
     background-repeat: no-repeat;
     background-color:white;
@@ -708,8 +708,8 @@ text-align: center;
     border-radius: 5px;
     cursor: pointer;
   }
-/*end Subscribe section (Mohammed)*/
-/* start footer (Mohammed) */
+/*end Subscribe section*/
+/* start footer */
 footer{
     display: flex;
     justify-content: center;
@@ -777,4 +777,4 @@ body .dark-mode .footer-column ul li a{
     cursor: pointer;
 }
   
-/* end footer (Mohammed) */
+/* end footer */
