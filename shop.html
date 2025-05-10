@@ -19,6 +19,7 @@
 
     <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
 
+    <!-- start header (nav bar) -->
     <header>
         <div class="container">
             <div class="nav-bar">
@@ -26,7 +27,6 @@
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <a href="index.html"><img src="imgs\logo2.png" alt="logo-img" id="logo"></a>
-
                 <div class="links">
                     <ul class="parent-ul">
                         <li class="parent-li"><a href="index.html">Home</a></li>
@@ -79,13 +79,15 @@
             </div>
             <div class="search" id="Search-Field">
                 <form action="">
-                    <input type="text" placeholder="Search Here">
+                    <input type="text" placeholder="Search Here" id="searchInput">
                     <i id="rem-input-field" class="fa-solid fa-xmark"></i>
                 </form>
             </div>
         </div>
     </header>
+    <!-- end header (nav bar) -->
 
+    <!-- start banner -->
     <div class="starting-img">
         <div class="page-title">
             <h1 id="main-word"> Shop Page </h1>
@@ -96,7 +98,9 @@
             <img src="imgs\IMG-sofa.png" id="sofaimg">
         </div>
     </div>
+    <!-- end banner -->
 
+    <!-- start sidebar -->
     <div class="sidebar-container">
         <button class="toggle-sidebar-btn">☰ Filters</button>
         <div class="sidebar">
@@ -138,7 +142,9 @@
     
         </div>
     </div>
+    <!-- end sidebar -->
 
+    <!-- start all shop products -->
     <div class="all">
 
         <div class="first-row">
@@ -168,7 +174,7 @@
                     <span class="cart-text">+ add to cart</span>
                     <i class="fa-regular fa-heart"></i>
                 </a>
-            </div></a>
+            </div>
         </div>
 
         <div class="second-row">
@@ -199,7 +205,7 @@
                     <span class="cart-text">+ add to cart</span>
                     <i class="fa-regular fa-heart"></i>
                 </a>
-            </div></a>
+            </div>
         </div>
 
         <div class="third-row">
@@ -229,7 +235,7 @@
                     <span class="cart-text">+ add to cart</span>
                     <i class="fa-regular fa-heart"></i>
                 </a>
-            </div></a>
+            </div>
         </div>
 
         <div class="fourth-row">
@@ -259,11 +265,13 @@
                     <span class="cart-text">+ add to cart</span>
                     <i class="fa-regular fa-heart"></i>
                 </a>
-            </div>  </a>
+            </div>  
         </div>
 
     </div>
+    <!-- end shop products -->
 
+    <!-- start bestsellers -->
     <section class="bestsellers-section">
         <div class="best-seller-container">
             <div class="d-flex justify-content-between align-items-center mb-4">
@@ -317,6 +325,7 @@
       
         </div>
       </section> 
+      <!-- end bestsellers -->
 
     <script src="Javascript\shop.js"></script>
      
