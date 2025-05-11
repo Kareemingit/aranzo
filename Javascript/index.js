@@ -70,18 +70,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // end header
-//start shop summary
-document.addEventListener("DOMContentLoaded", function () {
-    const addToCartButtons = document.querySelectorAll(".add-to-cart");
-    const cartItemsNum = document.querySelector(".nav-bar .cart span");
-
-    cartItemsNum.innerHTML = "0";
-
-    addToCartButtons.forEach(function (button) {
-        button.addEventListener("click", function (event) {
-            event.preventDefault();
-            cartItemsNum.innerHTML = Number(cartItemsNum.innerHTML) + 1;
-        });
-    });
-});
-//end shop summary
