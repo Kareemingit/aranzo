@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 let count = 1;
-const quantity = document.getElementById('quantity');
+const quantity = document.getElementById('quantity2');
 
 function increase() {
   count++;
